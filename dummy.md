@@ -2,29 +2,31 @@
 
 ## Table of Contents
 
-Endpoint	Method	Description
-/draft/contract/int:id	GET	Retrieves contract information by ID.
-/draft/contract	POST	Creates a draft contract.
-/draft/contract/int:id	PUT	Updates a contract by its ID.
-/draft/contract/int:id	DELETE	Deletes contract by contract ID.
-/draft/contracts	GET	Retrieves draft contracts filtered by various params.
-/contracts	GET	Retrieves contracts filtered by various params.
-/avendra/contract/int:contract_id	DELETE	Deletes contract by contract ID.
-/approve-contract/int:contract_id	POST	Approves a draft contract by its ID.
-/upload	POST	Uploads a PDF file and extracts data from it.
-/draft/products	GET	Retrieves products filtered by various params.
-/products	GET	Retrieves products filtered by various params.
-/company/int:id	GET	Retrieves company information by ID.
-/productions	GET	Retrieves information about all productions.
-/companies/contracts	GET	Retrieves all companies with associated contracts.
-/companies/draft	GET	Retrieves all draft companies.
-/company/draft/int:id	DELETE	Deletes a draft company by its ID.
-/company/draft/int:id	PUT	Updates a draft company by its ID.
-/company/draft	POST	Creates a draft company.
-/product/int:id	GET	Retrieves product information by ID.
-/product	POST	Creates a new product.
-/product/int:id	PUT	Updates product information by ID.
-/product/int:id	DELETE	Deletes a product by its ID.
+| Endpoint                            | Method | Description                                             |
+|-------------------------------------|--------|---------------------------------------------------------|
+| /draft/contract/<int:id>            | GET    | Retrieves contract information by ID.                   |
+| /draft/contract                     | POST   | Creates a draft contract.                              |
+| /draft/contract/<int:id>            | PUT    | Updates a contract by its ID.                          |
+| /draft/contract/<int:id>            | DELETE | Deletes contract by contract ID.                        |
+| /draft/contracts                    | GET    | Retrieves draft contracts filtered by various params.  |
+| /contracts                         | GET    | Retrieves contracts filtered by various params.         |
+| /avendra/contract/<int:contract_id> | DELETE | Deletes contract by contract ID.                        |
+| /approve-contract/<int:contract_id> | POST   | Approves a draft contract by its ID.                   |
+| /upload                             | POST   | Uploads a PDF file and extracts data from it.          |
+| /draft/products                     | GET    | Retrieves products filtered by various params.         |
+| /products                           | GET    | Retrieves products filtered by various params.         |
+| /company/<int:id>                   | GET    | Retrieves company information by ID.                   |
+| /productions                        | GET    | Retrieves information about all productions.           |
+| /companies/contracts                | GET    | Retrieves all companies with associated contracts.      |
+| /companies/draft                    | GET    | Retrieves all draft companies.                         |
+| /company/draft/<int:id>             | DELETE | Deletes a draft company by its ID.                     |
+| /company/draft/<int:id>             | PUT    | Updates a draft company by its ID.                     |
+| /company/draft                      | POST   | Creates a draft company.                               |
+| /product/<int:id>                  | GET    | Retrieves product information by ID.                   |
+| /product                            | POST   | Creates a new product.                                 |
+| /product/<int:id>                  | PUT    | Updates product information by ID.                     |
+| /product/<int:id>                  | DELETE | Deletes a product by its ID.                           |
+
 
 ## API Endpoints
 
