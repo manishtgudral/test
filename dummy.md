@@ -2,35 +2,36 @@
 
 ## Table of Contents
 
-| Endpoint                            | Method | Description                                             |
-|-------------------------------------|--------|---------------------------------------------------------|
-| /draft/contract/<int:id>            | GET    | Retrieves contract information by ID.                   |
-| /draft/contract                     | POST   | Creates a draft contract.                              |
-| /draft/contract/<int:id>            | PUT    | Updates a contract by its ID.                          |
-| /draft/contract/<int:id>            | DELETE | Deletes contract by contract ID.                        |
-| /draft/contracts                    | GET    | Retrieves draft contracts filtered by various params.  |
-| /contracts                         | GET    | Retrieves contracts filtered by various params.         |
-| /avendra/contract/<int:contract_id> | DELETE | Deletes contract by contract ID.                        |
-| /approve-contract/<int:contract_id> | POST   | Approves a draft contract by its ID.                   |
-| /upload                             | POST   | Uploads a PDF file and extracts data from it.          |
-| /draft/products                     | GET    | Retrieves products filtered by various params.         |
-| /products                           | GET    | Retrieves products filtered by various params.         |
-| /company/<int:id>                   | GET    | Retrieves company information by ID.                   |
-| /productions                        | GET    | Retrieves information about all productions.           |
-| /companies/contracts                | GET    | Retrieves all companies with associated contracts.      |
-| /companies/draft                    | GET    | Retrieves all draft companies.                         |
-| /company/draft/<int:id>             | DELETE | Deletes a draft company by its ID.                     |
-| /company/draft/<int:id>             | PUT    | Updates a draft company by its ID.                     |
-| /company/draft                      | POST   | Creates a draft company.                               |
-| /product/<int:id>                  | GET    | Retrieves product information by ID.                   |
-| /product                            | POST   | Creates a new product.                                 |
-| /product/<int:id>                  | PUT    | Updates product information by ID.                     |
-| /product/<int:id>                  | DELETE | Deletes a product by its ID.                           |
+| #   | Endpoint                            | Method | Description                                             |
+|-----|-------------------------------------|--------|---------------------------------------------------------|
+| 1   | /draft/contract/<int:id>            | GET    | Retrieves contract information by ID.                   |
+| 2   | /draft/contract                     | POST   | Creates a draft contract.                              |
+| 3   | /draft/contract/<int:id>            | PUT    | Updates a contract by its ID.                          |
+| 4   | /draft/contract/<int:id>            | DELETE | Deletes contract by contract ID.                        |
+| 5   | /draft/contracts                    | GET    | Retrieves draft contracts filtered by various params.  |
+| 6   | /contracts                         | GET    | Retrieves contracts filtered by various params.         |
+| 7   | /avendra/contract/<int:contract_id> | DELETE | Deletes contract by contract ID.                        |
+| 8   | /approve-contract/<int:contract_id> | POST   | Approves a draft contract by its ID.                   |
+| 9   | /upload                             | POST   | Uploads a PDF file and extracts data from it.          |
+| 10  | /draft/products                     | GET    | Retrieves products filtered by various params.         |
+| 11  | /products                           | GET    | Retrieves products filtered by various params.         |
+| 12  | /company/<int:id>                   | GET    | Retrieves company information by ID.                   |
+| 13  | /productions                        | GET    | Retrieves information about all productions.           |
+| 14  | /companies/contracts                | GET    | Retrieves all companies with associated contracts.      |
+| 15  | /companies/draft                    | GET    | Retrieves all draft companies.                         |
+| 16  | /company/draft/<int:id>             | DELETE | Deletes a draft company by its ID.                     |
+| 17  | /company/draft/<int:id>             | PUT    | Updates a draft company by its ID.                     |
+| 18  | /company/draft                      | POST   | Creates a draft company.                               |
+| 19  | /product/<int:id>                  | GET    | Retrieves product information by ID.                   |
+| 20  | /product                            | POST   | Creates a new product.                                 |
+| 21  | /product/<int:id>                  | PUT    | Updates product information by ID.                     |
+| 22  | /product/<int:id>                  | DELETE | Deletes a product by its ID.                           |
 
 
-## API Endpoints
 
-### Get company by ID
+# API Endpoints
+
+## 1. Get company by ID
 
 - **URL**: `/draft/company/<int:id>`
 - **Method**: `GET`
@@ -42,7 +43,7 @@
   - `404`: Company not found.
   - `500`: Internal server error.
 
-### Read All Productions
+## 2. Read All Productions
 
 - **URL**: `/productions`
 - **Method**: `GET`
@@ -51,7 +52,7 @@
   - `200`: Data retrieved successfully.
   - `500`: Error reading data from the database.
 
-### Get all companies with contracts
+## 3. Get all companies with contracts
 
 - **URL**: `/company`
 - **Method**: `GET`
@@ -62,7 +63,7 @@
   - `200`: List of companies with contracts retrieved successfully.
   - `500`: Internal server error.
 
-### Get all draft companies
+## 4. Get all draft companies
 
 - **URL**: `/draft/company`
 - **Method**: `GET`
@@ -73,7 +74,7 @@
   - `200`: Successful response.
   - `500`: Internal server error.
 
-### Delete a draft company
+## 5. Delete a draft company
 
 - **URL**: `/draft/company/<int:id>`
 - **Method**: `DELETE`
@@ -86,7 +87,7 @@
   - `404`: Company not found.
   - `500`: Internal server error.
 
-### Update a draft company
+## 6. Update a draft company
 
 - **URL**: `/draft/company/<int:id>`
 - **Method**: `PUT`
@@ -99,7 +100,7 @@
   - `404`: Company not found.
   - `500`: Internal server error.
 
-### Create a draft company
+## 7. Create a draft company
 
 - **URL**: `/draft/company`
 - **Method**: `POST`
@@ -109,7 +110,7 @@
   - `400`: Bad request.
   - `500`: Internal server error.
 
-### Get product by ID
+## 8. Get product by ID
 
 - **URL**: `/draft/product/<int:id>`
 - **Method**: `GET`
@@ -121,7 +122,7 @@
   - `404`: Product not found.
   - `500`: Internal server error.
 
-### Create a new product
+## 9. Create a new product
 
 - **URL**: `/draft/product`
 - **Method**: `POST`
@@ -131,7 +132,7 @@
   - `400`: Bad request.
   - `500`: Internal server error.
 
-### Update product information
+## 10. Update product information
 
 - **URL**: `/draft/product/<int:id>`
 - **Method**: `PUT`
@@ -143,7 +144,7 @@
   - `400`: Bad request.
   - `500`: Internal server error.
 
-### Delete a product
+## 11. Delete a product
 
 - **URL**: `/draft/product/<int:id>`
 - **Method**: `DELETE`
@@ -156,24 +157,26 @@
   - `404`: Product not found.
   - `500`: Internal server error.
 
-# API Endpoints Documentation
+## 12. Read Contract
 
-## Read Contract
 ### GET /draft/contract/<int:id>
+
 Retrieves contract information by ID.
 
 #### Parameters
-- id (path parameter): ID of the contract to retrieve. (integer)
+
+- `id` (path parameter): ID of the contract to retrieve. (integer)
 
 #### Responses
-- 200: Contract information retrieved successfully.
+
+- `200`: Contract information retrieved successfully.
   - JSON Response Body:
     ```json
     {
         // Contract information
     }
     ```
-- 404: Contract not found.
+- `404`: Contract not found.
   - JSON Response Body:
     ```json
     {
@@ -181,21 +184,25 @@ Retrieves contract information by ID.
     }
     ```
 
-## Create Contract
+## 13. Create Contract
+
 ### POST /draft/contract
+
 Creates a draft contract based on the provided data.
 
 #### Request Body
-- contract_start_date (string): The start date of the contract. (date format)
-- contract_end_date (string): The end date of the contract. (date format)
-- client_id (integer): The ID of the client associated with the contract.
-- supplier_id (integer): The ID of the supplier associated with the contract.
-- version (integer): The version of the contract.
-- document_id (integer): ID of the document.
-- renewal_date (string): The renewal date for the contract.
+
+- `contract_start_date` (string): The start date of the contract. (date format)
+- `contract_end_date` (string): The end date of the contract. (date format)
+- `client_id` (integer): The ID of the client associated with the contract.
+- `supplier_id` (integer): The ID of the supplier associated with the contract.
+- `version` (integer): The version of the contract.
+- `document_id` (integer): ID of the document.
+- `renewal_date` (string): The renewal date for the contract.
 
 #### Responses
-- 201: Contract created successfully.
+
+- `201`: Contract created successfully.
   - JSON Response Body:
     ```json
     {
@@ -203,84 +210,97 @@ Creates a draft contract based on the provided data.
         "id": 123
     }
     ```
-- 400: Error creating contract.
+- `400`: Error creating contract.
   - JSON Response Body:
     ```json
     {
         "error": "Invalid data provided"
     }
     ```
-- 500: Internal server error.
+- `500`: Internal server error.
 
-## Update Contract
+## 14. Update Contract
+
 ### PUT /draft/contract/<int:id>
+
 Updates a contract by its details.
 
 #### Parameters
-- id (path parameter): ID of the contract to update. (integer)
+
+- `id` (path parameter): ID of the contract to update. (integer)
 
 #### Request Body
-- contract_start_date (string): The new start date of the contract. (date format)
-- contract_end_date (string): The new end date of the contract. (date format)
-- client_id (integer): The new ID of the client associated with the contract.
-- supplier_id (integer): The new ID of the supplier associated with the contract.
-- document_type (string): Type of the document.
+
+- `contract_start_date` (string): The new start date of the contract. (date format)
+- `contract_end_date` (string): The new end date of the contract. (date format)
+- `client_id` (integer): The new ID of the client associated with the contract.
+- `supplier_id` (integer): The new ID of the supplier associated with the contract.
+- `document_type` (string): Type of the document.
 
 #### Responses
-- 200: Contract updated successfully.
+
+- `200`: Contract updated successfully.
   - JSON Response Body:
     ```json
     {
         "message": "Contract updated successfully"
     }
     ```
-- 404: Contract not found.
+- `404`: Contract not found.
   - JSON Response Body:
     ```json
     {
         "error": "Contract not found"
     }
     ```
-- 500: Error updating contract.
+- `500`: Error updating contract.
 
-## Delete Contract
+## 15. Delete Contract
+
 ### DELETE /draft/contract/<int:contract_id>
+
 Deletes contract by contract ID.
 
 #### Parameters
-- contract_id (path parameter): ID of the contract to delete. (integer)
+
+- `contract_id` (path parameter): ID of the contract to delete. (integer)
 
 #### Responses
-- 200: Contract deleted successfully.
+
+- `200`: Contract deleted successfully.
   - JSON Response Body:
     ```json
     {
         "message": "Contract deleted successfully"
     }
     ```
-- 404: Draft contract not found.
+- `404`: Draft contract not found.
   - JSON Response Body:
     ```json
     {
         "error": "Draft contract not found"
     }
     ```
-- 400: Error deleting contract.
+- `400`: Error deleting contract.
 
-## Get Draft Contracts
+## 16. Get Draft Contracts
+
 ### GET /draft/contracts
+
 Retrieves draft contracts filtered by parameters.
 
 #### Query Parameters
-- companyid (integer): ID of the company to filter contracts.
-- usertype (string): Type of user to filter contracts.
-- agreementtype (string): Type of agreement to filter contracts.
-- startdate (date format): Start date to filter contracts.
-- enddate (date format): End date to filter contracts.
-- production_id (integer): ID of the production to filter contracts. Defaults to '1' if not provided.
+
+- `companyid` (integer): ID of the company to filter contracts.
+- `usertype` (string): Type of user to filter contracts.
+- `agreementtype` (string): Type of agreement to filter contracts.
+- `startdate` (date format): Start date to filter contracts.
+- `enddate` (date format): End date to filter contracts.
+- `production_id` (integer): ID of the production to filter contracts. Defaults to '1' if not provided.
 
 #### Responses
-- 200: Draft contracts retrieved successfully.
+
+- `200`: Draft contracts retrieved successfully.
   - JSON Response Body:
     ```json
     {
@@ -291,22 +311,26 @@ Retrieves draft contracts filtered by parameters.
         ]
     }
     ```
-- 500: Error retrieving draft contracts.
+- `500`: Error retrieving draft contracts.
 
-## Get Contracts
+## 17. Get Contracts
+
 ### GET /contracts
+
 Retrieves contracts filtered by parameters.
 
 #### Query Parameters
-- companyid (integer): ID of the company to filter contracts.
-- usertype (string): Type of user to filter contracts.
-- agreementtype (string): Type of agreement to filter contracts.
-- startdate (date format): Start date to filter contracts.
-- enddate (date format): End date to filter contracts.
-- production_id (integer): ID of the production to filter contracts. Defaults to '1' if not provided.
+
+- `companyid` (integer): ID of the company to filter contracts.
+- `usertype` (string): Type of user to filter contracts.
+- `agreementtype` (string): Type of agreement to filter contracts.
+- `startdate` (date format): Start date to filter contracts.
+- `enddate` (date format): End date to filter contracts.
+- `production_id` (integer): ID of the production to filter contracts. Defaults to '1' if not provided.
 
 #### Responses
-- 200: Contracts retrieved successfully.
+
+- `200`: Contracts retrieved successfully.
   - JSON Response Body:
     ```json
     {
@@ -317,81 +341,96 @@ Retrieves contracts filtered by parameters.
         ]
     }
     ```
-- 500: Error retrieving contracts.
+- `500`: Error retrieving contracts.
 
-## Delete Contract (Avendra)
+## 18. Delete Contract (Avendra)
+
 ### DELETE /avendra/contract/<int:contract_id>
+
 Deletes contract by contract ID.
 
 #### Parameters
-- contract_id (path parameter): ID of the contract to delete. (integer)
+
+- `contract_id` (path parameter): ID of the contract to delete. (integer)
 
 #### Responses
-- 200: Contract deleted successfully.
+
+- `200`: Contract deleted successfully.
   - JSON Response Body:
     ```json
     {
         "message": "Contract deleted successfully"
     }
     ```
-- 404: Draft contract not found.
+- `404`: Draft contract not found.
   - JSON Response Body:
     ```json
     {
         "error": "Draft contract not found"
     }
     ```
-- 400: Error deleting contract.
+- `400`: Error deleting contract.
 
-## Approve Contract
+## 19. Approve Contract
+
 ### POST /approve-contract/<int:contract_id>
+
 Approve contract by Contract ID.
 
 #### Parameters
-- contract_id (path parameter): ID of the draft contract to approve. (integer)
+
+- `contract_id` (path parameter): ID of the draft contract to approve. (integer)
 
 #### Responses
-- 200: Draft contract approved successfully.
+
+- `200`: Draft contract approved successfully.
   - JSON Response Body:
     ```json
     {
         "message": "Contract approved successfully"
     }
     ```
-- 404: Draft contract not found.
+- `404`: Draft contract not found.
   - JSON Response Body:
     ```json
     {
         "error": "Draft contract not found"
     }
     ```
-- 500: Error approving contract.
+- `500`: Error approving contract.
 
-## Upload Files
+## 20. Upload Files
+
 ### POST /upload
+
 Upload a PDF file and extract data from it.
 
 #### Request Body
-- file: The PDF file to upload (multipart/form-data)
-- type (optional): Type of the document (string)
-- version (optional): Version of the document (string)
-- production_id (optional): ID of the production (integer)
+
+- `file`: The PDF file to upload (multipart/form-data)
+- `type` (optional): Type of the document (string)
+- `version` (optional): Version of the document (string)
+- `production_id` (optional): ID of the production (integer)
 
 #### Responses
-- 200: Data successfully processed.
-- 400: Bad request.
-- 500: Internal server error.
 
-## Get All Products
+- `200`: Data successfully processed.
+- `400`: Bad request.
+- `500`: Internal server error.
+
+## 21. Get All Products
+
 ### GET /draft/products
+
 Retrieves products by parameters.
 
 #### Query Parameters
-- contract_id (integer): ID of the contract to filter products.
-- product_name (string): Product name of product to filter products.
-- product_number (string): Product number of product to filter products.
-- price_range (string): Price range to filter products.
-- production_id (integer): ID of the production to filter products. Defaults to '1' if not provided.
+
+- `contract_id` (integer): ID of the contract to filter products.
+- `product_name` (string): Product name of product to filter products.
+- `product_number` (string): Product number of product to filter products.
+- `price_range` (string): Price range to filter products.
+- `production_id` (integer): ID of the
 
 #### Responses
 - 200: Products retrieved successfully.
